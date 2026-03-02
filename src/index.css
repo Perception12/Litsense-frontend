@@ -83,6 +83,7 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: #2563EB;
+  --primary-accent: #0C52E6;
   --primary-light: #9DB8F1;
   --primary-border: #9BB7F2;
   --bluewhite: #F9FBFF;

@@ -60,7 +60,7 @@ const AppSidebar = ({ activePage, setActivePage }: AppSidebarProps) => {
                       onClick={() => setActivePage(item.title.toLowerCase())}
                     >
                       <div
-                        className={`flex cursor-pointer hover:bg-blue-100 rounded-sm transition-all duration-300 p-2 ${activePage === item.title.toLowerCase() ? "text-blue-600" : "text-gray-600"}`}
+                        className={`flex cursor-pointer hover:bg-blue-100 rounded-sm transition-all duration-300 p-2 ${activePage === item.title.toLowerCase() ? "bg-secondary text-black" : "text-gray-800"}`}
                       >
                         <div className="flex items-center gap-2">
                           <img
