@@ -72,6 +72,7 @@
   --color-primary-light: var(--primary-light);
   --color-primary-border: var(--primary-border);
   --color-bluewhite: var(--bluewhite);
+  --color-primary-light-hover: var(--primary-light-hover);
 }
 
 :root {
@@ -85,6 +86,7 @@
   --primary: #2563EB;
   --primary-accent: #0C52E6;
   --primary-light: #9DB8F1;
+  --primary-light-hover: #e1eafc;
   --primary-border: #9BB7F2;
   --bluewhite: #F9FBFF;
   --primary-foreground: oklch(0.985 0 0);

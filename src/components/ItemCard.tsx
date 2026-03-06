@@ -1,14 +1,17 @@
+import type { UserInfo } from "@/lib/data_models";
 import { XIcon } from "lucide-react";
 
 const ItemCard = ({
   itemName,
-  setItems,
+  setUserInfo,
   listItems,
+  itemtag,
   className = "",
 }: {
   itemName: string;
-  setItems: (items: string[]) => void;
-  listItems: string[];
+  setUserInfo: React.Dispatch<React.SetStateAction<UserInfo>>;
+  listItems: string[] | undefined;
+  itemtag: string;
   className?: string;
 }) => {
   return (
@@ -18,7 +21,12 @@ const ItemCard = ({
       {itemName}{" "}
       <XIcon
         className="w-3 h-3 cursor-pointer"
-        onClick={() => setItems(listItems.filter((item) => item !== itemName))}
+        onClick={() =>
+          setUserInfo((prev) => ({
+            ...prev,
+            [itemtag]: listItems?.filter((item) => item !== itemName),
+          }))
+        }
       />
     </div>
   );

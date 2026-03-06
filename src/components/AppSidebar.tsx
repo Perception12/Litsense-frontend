@@ -44,7 +44,7 @@ const AppSidebar = ({ activePage, setActivePage }: AppSidebarProps) => {
   return (
     <Sidebar className="border-r-secondary">
       <SidebarHeader className="flex items-start justify-center p-4">
-        <img src={Logo} alt="LitSense Logo" className="w-[80%]" />
+        <img src={Logo} alt="LitSense Logo" className="w-[70%]" />
       </SidebarHeader>
       <SidebarContent>
         <SidebarContent>

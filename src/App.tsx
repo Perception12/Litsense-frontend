@@ -9,10 +9,18 @@ import AppSidebar from "@/components/AppSidebar";
 import IdentifyPage from "./components/IdentifyPage";
 import UserInfoPage from "./components/UserInfoPage";
 import { useState } from "react";
-
+import type { UserInfo } from "./lib/data_models";
 
 function App() {
   const [activePage, setActivePage] = useState("identify");
+  const [userInfo, setUserInfo] = useState<UserInfo>({
+    name: "",
+    age: undefined,
+    occupation: undefined,
+    location: undefined,
+    favoriteGenres: [],
+    favoriteAuthors: [],
+  });
 
   return (
     <>
@@ -29,9 +37,11 @@ function App() {
               Discover your taste!
             </p>
           </header>
-          {
-            activePage === "identify" ? <IdentifyPage /> : <UserInfoPage />
-          }
+          {activePage === "identify" ? (
+            <IdentifyPage userInfo={userInfo} />
+          ) : (
+            <UserInfoPage userInfo={userInfo} setUserInfo={setUserInfo} />
+          )}
         </SidebarInset>
       </SidebarProvider>
     </>
